@@ -1,0 +1,16 @@
+package com.bookshop.per;
+
+import java.util.List;
+
+import com.bookshop.domain.Member;
+
+public interface MemberMapper {
+	public List<Member> getMemberList();
+	public Member getMember(String id);     //멤버 아이디 필요
+	public int MemberCount();               //멤버 몇명인지 알기
+	public void insMember(Member member);   //멤버가 추가
+	public void delMember(String id);       //멤버 삭제
+	public void ChangeInfo(Member member);    // 정보 변경  
+	public void ChangePoint(Member member);   //포인트 변경
+	public void ChangePw(Member member) ;     //비밀번호 변경
+}

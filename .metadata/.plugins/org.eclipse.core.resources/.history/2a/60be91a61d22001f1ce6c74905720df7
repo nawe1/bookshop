@@ -1,0 +1,76 @@
+package com.bookshop.ctrl;
+
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.bookshop.biz.MemberService;
+
+@Controller
+@RequestMapping("/member/")
+public class MemberController {
+	
+	private static final Logger log =LoggerFactory.getLogger(MemberController.class);
+	
+	@Autowired
+	private MemberService memberService;
+	
+	@Autowired
+	private BCryptPasswordEncoder pwdEncoder;   //비밀번호 암호화
+	
+	@Autowired
+	private HttpSession session;     //로그인,장바구니 정보를 세션에 저장
+	
+	@GetMapping("term.do")
+	public String agree(Model model) {
+		return "member/term";
+	}
+	
+	@GetMapping("join.do")
+	public String join(Model model) {
+		return "member/join";
+	}
+	
+	@PostMapping("joinpro.do")
+	public String joinpro(Model model) {
+	return "";
+	}
+	
+	@GetMapping("login.do")
+	public String login(Model model) {
+		return "member/login";
+	}
+	
+	@PostMapping("loginpro.do")
+	public String loginpro(Model model) {
+		return "";
+	}
+	
+	@GetMapping("logout.do")
+	public String logout(Model model) {
+		return "";
+	}
+	
+	@GetMapping("myUpdate.do")
+	public String myUpdate(Model model) {
+		return "member/myUpdate";
+	}
+	
+	@PostMapping("myUpdatePro.do")
+	public String myUpdatePro(Model model) {
+		return "";	
+	}
+	
+	@GetMapping("memberDelete.do")
+	public String memberDelete(Model,model) {
+		return "";
+	}
+}

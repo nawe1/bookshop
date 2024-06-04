@@ -1,0 +1,98 @@
+package com.bookshop.ctrl;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.bookshop.biz.MemberService;
+import com.bookshop.domain.Member;
+
+@Controller
+@RequestMapping("/member/")
+public class MemberController {
+	
+	private static final Logger log =LoggerFactory.getLogger(MemberController.class);
+	
+	@Autowired
+	private MemberService memberService;
+	
+	@Autowired
+	private BCryptPasswordEncoder pwdEncoder;   //비밀번호 암호화
+	
+	@Autowired
+	private HttpSession session;     //로그인,장바구니 정보를 세션에 저장
+	
+	@GetMapping("term.do")
+	public String agree(Model model, RedirectAttributes rttr) {
+		rttr.addAttribute("msg","회원 약관에 동의하시기 바랍니다.");
+		return "member/term";
+	}
+	
+	@GetMapping("join.do")
+	public String join(Model model, @ModelAttribute("member") Member member) {
+		model.addAttribute("member",member);
+		return "member/join";
+	}
+	
+	@PostMapping("joinpro.do")
+	public String joinpro(HttpServletRequest request, Model model, RedirectAttributes rttr) {
+		Member member = new Member();
+		member.setId(request.getParameter("id"));
+		member.setPw(pwdEncoder.encode(request.getParameter("pw")));
+		member.setName(request.getParameter("name"));
+		member.setAge(Integer.parseInt(request.getParameter("age")));
+		member.setGender(request.getParameter("gender"));
+		member.setTel(request.getParameter("tel"));
+		member.setEmail(request.getParameter("email"));
+		member.setAddr1(request.getParameter("addr1"));
+		member.setAddr2(request.getParameter("addr2"));
+		member.setPostcode(request.getParameter("postcode"));
+		member.setResdate(request.getParameter("resdate"));
+		member.setRcnt(Integer.parseInt(request.getParameter("rcnt")));
+		member.setPoint(Integer.parseInt(request.getParameter("point")));  //HttpServletRequest 값을 가져올떄 Int는 이런식으로 작성
+		memberService.insMember(member);
+		model.addAttribute("msg","회원가입을 축하합니다.");
+		return "redirect:/";
+	}
+	
+	@GetMapping("login.do")
+	public String login(Model model) {
+		return "member/login";
+	}
+	
+	@PostMapping("loginpro.do")
+	public String loginpro(Model model) {
+		return "";
+	}
+	
+	@GetMapping("logout.do")
+	public String logout(Model model) {
+		return "";
+	}
+	
+	@GetMapping("myUpdate.do")
+	public String myUpdate(Model model) {
+		return "member/myUpdate";
+	}
+	
+	@PostMapping("myUpdatePro.do")
+	public String myUpdatePro(Model model) {
+		return "";	
+	}
+	
+	@GetMapping("memberDelete.do")
+	public String memberDelete(Model,model) {
+		return "";
+	}
+}

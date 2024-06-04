@@ -1,0 +1,981 @@
+!SESSION 2024-06-04 11:37:29.301 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-06-04 11:37:49.491
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-04 11:37:49.491
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a110e7d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b3cbc0e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2024-06-04 11:37:50.002
+!MESSAGE org.eclipse.jdt.junit.ResultView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2024-06-04 11:37:50.002
+!MESSAGE org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2024-06-04 11:37:50.002
+!MESSAGE org.eclipse.contribution.xref.ui.views.XReferenceView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-04 11:37:52.604
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2024-06-04 11:40:11.717
+!MESSAGE Connection to http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/updates/libertyAdapter/2020-09/site.xml failed on Connect to public.dhe.ibm.com:80 [public.dhe.ibm.com/170.225.126.18] failed: Connection refused: connect. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.HttpHostConnectException: Connect to public.dhe.ibm.com:80 [public.dhe.ibm.com/170.225.126.18] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:615)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2024-06-04 11:40:17.747
+!MESSAGE Connection to http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/updates/libertyAdapter/2020-09/p2.index failed on Connect to public.dhe.ibm.com:80 [public.dhe.ibm.com/170.225.126.18] failed: Connection refused: connect. Retry attempt 0 started
+!STACK 0
+org.apache.http.conn.HttpHostConnectException: Connect to public.dhe.ibm.com:80 [public.dhe.ibm.com/170.225.126.18] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/java.net.PlainSocketImpl.waitForConnect(Native Method)
+	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:107)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:615)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 13 more
+!SESSION 2024-06-04 11:43:24.311 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-06-04 11:43:29.251
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-04 11:43:29.251
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@653a5a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19ce597a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-04 11:43:32.562
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.ide.eclipse.wizard 4 0 2024-06-04 11:43:54.198
+!MESSAGE Template data missing. Please check the template Spring MVC Project to verify it has content.
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.springframework.ide.eclipse.wizard.template.TemplateDataUIJob.run(TemplateDataUIJob.java:74)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: Template data missing. Please check the template Spring MVC Project to verify it has content.
+	at org.springframework.ide.eclipse.wizard.template.TemplateDataUIJob.run(TemplateDataUIJob.java:75)
+	... 1 more
+Root exception:
+org.eclipse.core.runtime.CoreException: Template data missing. Please check the template Spring MVC Project to verify it has content.
+	at org.springframework.ide.eclipse.wizard.template.TemplateDataUIJob.run(TemplateDataUIJob.java:75)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:15.680
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:15.691
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:18.589
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:18.600
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:27.076
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:27.081
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:27.102
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:35.917
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:35.919
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:44.271
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:44:44.274
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:45:07.148
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:45:07.153
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2024-06-04 11:46:50.970 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-06-04 11:46:55.503
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-04 11:46:55.503
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f3c27e9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1fd4850b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-04 11:46:59.209
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:05.994
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:06.384
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:06.853
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.303
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.303
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.303
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.303
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.303
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.319
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.323
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.324
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.326
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:07.368
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:07.429
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:07.452
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.609
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.610
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.611
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.637
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.638
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.640
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.641
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.642
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.644
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.694
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.695
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.696
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.704
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.705
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.707
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.709
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.710
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.712
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.759
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.761
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.762
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.781
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.782
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.783
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.785
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.786
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.788
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.842
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.844
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.845
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:07.886
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.000
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.002
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.003
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.004
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.006
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.007
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.022
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.023
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.025
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.026
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.028
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.029
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.045
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.047
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.048
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.049
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.051
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.052
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.052
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.052
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.068
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.070
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:08.070
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.073
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2024-06-04 11:47:08.075
+!MESSAGE C:\Users\user1\.m2\repository\org\springframework\spring-context\3.1.1.RELEASE\spring-context-3.1.1.RELEASE.jar is not on its project's build path
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:08.111
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:47:08.127
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:49:08.257
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:49:08.262
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:52:04.742
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:52:04.746
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:53:41.724
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 11:53:41.727
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:24:38.389
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:24:38.392
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:35:23.700
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:35:23.702
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:39:16.293
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:39:16.296
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:39:57.198
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:39:57.201
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:40:09.639
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 12:40:09.641
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 12:45:40.276
+!MESSAGE No repository found at https://download.springsource.com/release/TOOLS/update/e4.21.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 12:46:27.546
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 12:48:03.180
+!MESSAGE No repository found at http://dl.bintray.com/testng-team/testng-p2-release/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 12:48:17.452
+!MESSAGE No repository found at file:/C:/Users/user1/Desktop/sts-bundle/sts-3.9.18.RELEASE/configuration/org.eclipse.osgi/267/data/listener_1925729951/.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:26:22.750
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:26:22.754
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2024-06-04 15:26:32.585
+!MESSAGE Several ports (8005, 8091) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:29:55.192
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:29:55.193
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:30:32.501
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:30:32.504
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:32:24.715
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:32:24.717
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:09.812
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:09.814
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:21.602
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:21.819
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:23.849
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:23.880
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:23.894
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:44:23.906
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2024-06-04 15:46:18.252 -----------------------------------------------
+eclipse.buildId=3.9.18.202109140905-RELEASE-e421
+java.version=11.0.22
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2024-06-04 15:46:25.327
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-06-04 15:46:25.327
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a1b4854,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a175162,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-06-04 15:46:31.333
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:46:32.920
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.31 has been relocated to com.mysql:mysql-connector-j:jar:8.0.31
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:46:33.157
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:46:33.170
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:47:25.979
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:47:25.988
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:47:38.802
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:47:38.805
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2024-06-04 15:48:07.357
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Core Exception [code 3] Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:52)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	... 25 more
+Caused by: org.eclipse.core.runtime.CoreException: Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:337)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	... 34 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 3 2024-06-04 15:48:07.360
+!MESSAGE Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+!STACK 0
+java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2024-06-04 15:48:11.952
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Core Exception [code 3] Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:52)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	... 25 more
+Caused by: org.eclipse.core.runtime.CoreException: Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:337)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	... 34 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 3 2024-06-04 15:48:11.953
+!MESSAGE Some characters cannot be mapped using "MS949" character encoding.
+Either change the encoding or remove the characters which are not supported by the "MS949" character encoding.
+!STACK 0
+java.nio.charset.UnmappableCharacterException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:275)
+	at java.base/java.nio.charset.CharsetEncoder.encode(CharsetEncoder.java:813)
+	at org.eclipse.core.internal.filebuffers.ResourceTextFileBuffer.commitFileBufferContent(ResourceTextFileBuffer.java:325)
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.commit(ResourceFileBuffer.java:317)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.saveFileIfNeeded(AbstractDeleteChange.java:51)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.saveCUnitIfNeeded(DeleteSourceManipulationChange.java:137)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DeleteSourceManipulationChange.doDelete(DeleteSourceManipulationChange.java:103)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.AbstractDeleteChange.perform(AbstractDeleteChange.java:40)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.lambda$0(DynamicValidationStateChange.java:105)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:740)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5917)
+	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:106)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:281)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:295)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:21.508
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:21.511
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:23.694
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:23.695
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:27.662
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:48:27.664
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:11.541
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:11.546
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:28.449
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:28.453
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:41.052
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:41.052
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:52.341
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 15:50:52.344
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 15:51:11.705
+!MESSAGE No repository found at https://download.springsource.com/release/TOOLS/update/e4.21.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 15:51:59.313
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 15:53:41.297
+!MESSAGE No repository found at http://dl.bintray.com/testng-team/testng-p2-release/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-06-04 15:53:57.506
+!MESSAGE No repository found at file:/C:/Users/user1/Desktop/sts-bundle/sts-3.9.18.RELEASE/configuration/org.eclipse.osgi/267/data/listener_1925729951/.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:04:47.751
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:04:47.755
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:00.325
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:00.327
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:03.601
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:03.605
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:30.536
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:30.539
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:41.962
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:41.966
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:47.638
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:47.642
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:57.052
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:05:57.052
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:06:34.573
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:06:34.576
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:06:55.626
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-06-04 16:06:55.629
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
