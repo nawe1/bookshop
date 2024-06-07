@@ -9,34 +9,24 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.bookshop.domain.Member;
 
-
 public class AdminInterceptor extends HandlerInterceptorAdapter {
-    @Override
+	@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
-    	String requestURI = request.getRequestURI();
-    	
-        // /sales/ °æ·Î¿¡ ´ëÇØ ¿¹¿Ü Ã³¸®
-        if(requestURI.startsWith(request.getContextPath() + "/sales/")) {
-            return true;
-        }
-
         HttpSession session = request.getSession();
-        Member ses = (Member) session.getAttribute("cus");
-        
-        if(session.getAttribute("cus")==null) { //·Î±×ÀÎÀ» ÇÏÁö ¾ÊÀº °æ¿ì
+        Member mem = (Member) session.getAttribute("mem");
+        if(session.getAttribute("memb")==null) { //ë¡œê·¸ì¸ì„ í•˜ì§€ ì•Šì€ ê²½ìš°
             response.sendRedirect(request.getContextPath()+"/member/login.do");
             return false;
         }
-        
-        if(ses.getId().equals("admin")){ //°ü¸®ÀÚ(admin) °èÁ¤ÀÎ °æ¿ì (/admin/**) Á¢±Ù °¡´É
+        if(mem.getId().equals("admin")){ //ê´€ë¦¬ì(admin) ê³„ì •ì¸ ê²½ìš° (/admin/**) ì ‘ê·¼ ê°€ëŠ¥
             return true;
-        } else { //°ü¸®ÀÚ(admin) °èÁ¤ÀÌ ¾Æ´Ñ °æ¿ì
+        } else { //ê´€ë¦¬ì(admin) ê³„ì •ì´ ì•„ë‹Œ ê²½ìš°
+        	
             response.sendRedirect(request.getContextPath()+"/member/login.do");
             return false;
         }
     }
-
+	
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         super.postHandle(request, response, handler, modelAndView);

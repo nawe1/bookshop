@@ -42,7 +42,7 @@ public class MemberController {
 
 	@GetMapping("term.do")
 	public String agree(Model model, RedirectAttributes rttr) {
-		rttr.addAttribute("msg", "íšŒì› ì•½ê´€ì— ë™ì˜í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤.");
+		rttr.addAttribute("msg", "È¸¿ø ¾à°ü¿¡ µ¿ÀÇÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.");
 		return "member/term";
 	}
 	
@@ -78,7 +78,7 @@ public class MemberController {
 	public String joinPro(HttpServletRequest request, Model model, RedirectAttributes rttr) {
 		Member member = new Member();
 		member.setId(request.getParameter("id"));
-		member.setPw(pwdEncoder.encode(request.getParameter("pw")));	//ë¹„ë°€ë²ˆí˜¸ ì•”í˜¸í™”
+		member.setPw(pwdEncoder.encode(request.getParameter("pw")));	//ºñ¹Ğ¹øÈ£ ¾ÏÈ£È­
 		member.setName(request.getParameter("name"));
 		member.setEmail(request.getParameter("email"));
 		member.setTel(request.getParameter("tel"));
@@ -86,7 +86,7 @@ public class MemberController {
 		member.setAddr2(request.getParameter("addr2"));
 		member.setPostcode(request.getParameter("postcode"));
 		memberService.insMember(member);
-		model.addAttribute("msg", "íšŒì›ê°€ì…ì„ ì¶•í•˜í•©ë‹ˆë‹¤.");
+		model.addAttribute("msg", "È¸¿ø°¡ÀÔÀ» ÃàÇÏÇÕ´Ï´Ù.");
 		return "redirect:/";
 	}
 	
@@ -106,10 +106,10 @@ public class MemberController {
 			session.setAttribute("sid", id);
 			session.setAttribute("spw", pw);
 			session.setAttribute("sname", cus.getName());
-			model.addAttribute("msg", "ë¡œê·¸ì¸ ì„±ê³µ");
+			model.addAttribute("msg", "·Î±×ÀÎ ¼º°ø");
 			return "redirect:/";
 		} else {
-			//rttr.addAttribute("msg", "ë¡œê·¸ì¸ ì‹¤íŒ¨");
+			//rttr.addAttribute("msg", "·Î±×ÀÎ ½ÇÆĞ");
 			return "redirect:login.do";	
 		}
 	}
@@ -117,7 +117,7 @@ public class MemberController {
 	@GetMapping("logout.do")
 	public String logout(Model model, RedirectAttributes rttr) {
 		session.invalidate();
-		model.addAttribute("msg", "ë¡œê·¸ì•„ì›ƒ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+		model.addAttribute("msg", "·Î±×¾Æ¿ô ÇÏ¿´½À´Ï´Ù.");
 		return "redirect:/";
 	}
 	
@@ -135,7 +135,7 @@ public class MemberController {
 	public String myUpdatePro(HttpServletRequest request, Model model, RedirectAttributes rttr) {
 		Member member = new Member();
 		member.setId(request.getParameter("id"));
-		member.setPw(pwdEncoder.encode(request.getParameter("pw")));	//ë¹„ë°€ë²ˆí˜¸ ì•”í˜¸í™”
+		member.setPw(pwdEncoder.encode(request.getParameter("pw")));	//ºñ¹Ğ¹øÈ£ ¾ÏÈ£È­
 		member.setName(request.getParameter("name"));
 		member.setEmail(request.getParameter("email"));
 		member.setTel(request.getParameter("tel"));
@@ -143,7 +143,7 @@ public class MemberController {
 		member.setAddr2(request.getParameter("addr2"));
 		member.setPostcode(request.getParameter("postcode"));
 		memberService.ChangeInfo(member);
-		model.addAttribute("msg", "íšŒì›ê°€ì…ì„ ì¶•í•˜í•©ë‹ˆë‹¤.");
+		model.addAttribute("msg", "È¸¿ø°¡ÀÔÀ» ÃàÇÏÇÕ´Ï´Ù.");
 		session.invalidate();
 		return "redirect:/";
 	}

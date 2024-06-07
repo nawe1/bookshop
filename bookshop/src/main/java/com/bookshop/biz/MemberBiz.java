@@ -14,4 +14,3 @@ public interface MemberBiz {
 	public void ChangePoint(Member member);   
 	public void ChangePw(Member member) ;     
 }
-

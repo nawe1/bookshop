@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 public class LoginCheckFilter implements Filter {
 
-    @Override
+	@Override
     public void init(FilterConfig filterConfig) throws ServletException {}
 
     @Override
@@ -26,7 +26,7 @@ public class LoginCheckFilter implements Filter {
         
         HttpSession session = httpRequest.getSession(false);
         String path = httpRequest.getContextPath();
-        if(session == null || session.getAttribute("cus") == null) {
+        if(session == null || session.getAttribute("memb") == null) {
             httpResponse.sendRedirect(path+"/member/login.do");
             return;
         }
@@ -36,4 +36,5 @@ public class LoginCheckFilter implements Filter {
 
     @Override
     public void destroy() {}
+
 }
