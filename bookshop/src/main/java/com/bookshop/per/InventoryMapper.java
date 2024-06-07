@@ -11,5 +11,6 @@ public interface InventoryMapper {
 	public void insInventory(Inventory inventory);
 	public void upInventory(Inventory inventory);
 	public void delInventory(int ino);
-	
+	public int priceCount(int ino);
+	public int getAmount(int amount);
 }

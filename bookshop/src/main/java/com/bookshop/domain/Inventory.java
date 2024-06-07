@@ -1,13 +1,20 @@
 package com.bookshop.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Inventory {
-	private int ino;           //ÀÔÃâ°í¹øÈ£
-	private String product_id; //»óÇ°¾Æ¾Æµğ
-	private int orderno;       //ÁÖ¹®¹øÈ£
-	private String member_id;  //È¸¿ø¾ÆÀÌµğ
-	private int amount;        //ÀÔÃâ°í·®
-	private String status;     // »óÅÂ
-	private String pdate;      // ÀÔÃâ°í³¯Â¥
-	private String iprice;     // ÀÔ°í°¡°İ
-	private String oprice;     // Ãâ°í°¡°İ
+	private int ino;           //ì…ì¶œê³ ë²ˆí˜¸
+	private String product_id; //ìƒí’ˆ ì•„ì´ë””
+	private int orderno;       //ì£¼ë¶„ ë²ˆí˜¸
+	private String member_id;  //íšŒì› ì•„ì´ë””
+	private int amount;        //ì…ì¶œê³ ëŸ‰
+	private String status;     //ìƒíƒœ
+	private String pdate;      //ì…ì¶œê³  ë‚ ì§œ	
+	private String iprice;     //ì…ê³  ê°€ê²©
+	private String oprice;     //ì¶œê³  ê°€ê²©
 }

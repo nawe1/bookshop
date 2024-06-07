@@ -15,8 +15,8 @@
            <li><a href="${hpath }/AdminMain.do">관리자게시판</a></li>
           </c:when>
              <c:when test="${empty sid }">
-              <li><a href="${hpath }/member/login.do">로그인</a></li>
-              <li><a href="${hpath }/member/join.do">회원가입</a></li>
+              <li><a href="${hpath }/member/login.jsp">로그인</a></li>
+              <li><a href="${hpath }/Join.do">회원가입</a></li>
           </c:when>
           <c:when test="${not empty sid }">
            <li><a href="${hpath }/LogOut.do">로그아웃</a></li>

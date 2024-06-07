@@ -43,5 +43,15 @@ public class InventoryDAO implements InventoryMapper{
 	public void delInventory(int ino) {
 		sqlSession.delete("Inventory.delInventory",ino);
 	}
+
+	@Override
+	public int priceCount(int ino) {
+		return sqlSession.selectOne("Inventory.priceCount",ino);
+	}
+
+	@Override
+	public int getAmount(int amount) {
+		return sqlSession.selectOne("Inventory.getAmount",amount);
+	}
 	
 }

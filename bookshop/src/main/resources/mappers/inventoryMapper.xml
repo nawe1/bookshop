@@ -9,21 +9,17 @@
 		select count(*) from inventory
 	</select>
 
-	<!-- <select id="categoryLoading" parameterType="String" resultType="com.bookshop.domain">
-		select product_id,from product where cate=#{cate}
-	</select> -->
-
 	<!-- 재고 목록 조회 -->
 	<select id="getInventoryList" resultType="com.bookshop.domain.Inventory">
 		select * from inventory
 	</select>
 	
-	<!-- 재고 상세 보기 -->
+	<!-- 재고 상세 보기(필요하면 사용하기!) -->
 	<select id="getInventory" resultType="com.bookshop.domain.Inventory">
 		select * from inventory where product_id =#{product_id}
 	</select>
 	
-	<!-- 재고/판매 등록 -->
+	<!-- 재고/판매 등록(따로하면 불편할 것 같아서 일단 합체) -->
 	<insert id="insInventory" parameterType="com.bookshop.domain.Inventory">
 		insert into inventory values(default,#{product_id},#{orderno},#{amount},#{status},default,#{iprice},#{oprice})
 	</insert>
@@ -39,14 +35,14 @@
 	</delete>
 
 	<!--  입/출고량 조회 -->
-	<select id="iopriceCount" resultType="int">
-		select * from inventory where iprice=#{iprice} and oprice=#{oprice} 
+	<select id="priceCount" resultType="int">
+		select * from inventory where ino=#{ino}
 	</select>
 	
-	<!--  입출고량 -->
-	<select id="getamount">
+	<!--  입출고량 조회 -->
+	<select id="getAmount" resultType="int">
 		select * from inventory where amount= #{amount}
 	</select>
 		
-	<!--  -->	
+		
 </mapper>

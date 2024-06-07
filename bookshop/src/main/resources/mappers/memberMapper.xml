@@ -40,5 +40,10 @@
 	<delete id="delMember">
 		delete from member where id=#{id}
 	</delete>
+	
+	<!-- 신고수 증가 -->
+	<update id="upRcnt">
+		update member set rcnt= rcnt+1 where id=#{id}
+	</update>
 
 </mapper>

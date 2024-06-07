@@ -18,11 +18,6 @@ public class InventoryService implements InventoryBiz{
 	public int getTotalCount() {
 		return inventoryDAO.getTotalCount();
 	}
-	
-	@Override
-	public List<Inventory> inventoryList() {
-		return inventoryDAO.getInventoryList();
-	}
 
 	@Override
 	public Inventory getInventory(int product_id) {
@@ -30,8 +25,13 @@ public class InventoryService implements InventoryBiz{
 	}
 
 	@Override
+	public List<Inventory> getInventoryList() {
+		return inventoryDAO.getInventoryList();
+	}
+
+	@Override
 	public void insInventory(Inventory inventory) {
-		inventoryDAO.insInventory(inventory);		
+		inventoryDAO.insInventory(inventory);
 	}
 
 	@Override
@@ -44,5 +44,13 @@ public class InventoryService implements InventoryBiz{
 		inventoryDAO.delInventory(ino);
 	}
 
-	
+	@Override
+	public int priceCount(int ino) {
+		return inventoryDAO.priceCount(ino);
+	}
+
+	@Override
+	public int getAmount(int amount) {
+		return inventoryDAO.getAmount(amount);
+	}
 }
